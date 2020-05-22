@@ -1,0 +1,18 @@
+$grid-breakpoints: (
+  xs: $xs-breakpoint,
+  s: $s-breakpoint,
+  m: $m-breakpoint,
+  l: $l-breakpoint,
+);
+
+// Mixin calculating all rules for a specific media query
+// Usage: @include responsive-block('l') { font-size: 20px; }
+// Available breakpoints: see $grid-breakpoints
+@mixin responsive($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    $breakpoint: map-get($grid-breakpoints, $breakpoint);
+  }
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

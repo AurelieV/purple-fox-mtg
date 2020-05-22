@@ -10,5 +10,6 @@
   "vetur.format.defaultFormatter.ts": "none",
   "eslint.validate": ["vue", "javascript", "html"],
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.ignoreLimitWarning": true
 }

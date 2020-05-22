@@ -1,0 +1,23 @@
+//-- Breakpoints
+$xs-breakpoint: rem(0px);
+$s-breakpoint: rem(375px);
+$m-breakpoint: rem(770px);
+$l-breakpoint: rem(1030px);
+
+$primary-color: rebeccapurple;
+$secondary-color: orange;
+
+// Space
+$spacing-base: rem(16px);
+$spacing-half: $spacing-base * 0.5; // 8px
+$spacing-regular: $spacing-base; // 16px
+$spacing-medium: $spacing-base * 1.5; // 24px
+$spacing-double: $spacing-base * 2; // 32px
+$spacing-large: $spacing-base * 2.5; // 40px
+$spacing-mlarge: $spacing-base * 3; // 48px
+$spacing-xlarge: $spacing-base * 4; // 64px
+$spacing-xxlarge: $spacing-base * 5; // 80px
+$spacing-xxxlarge: $spacing-base * 6; // 96px
+
+$title-font-size: rem(24px);
+$opacity-disabled: 0.4;

@@ -1,0 +1,67 @@
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  outline: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:disabled {
+    cursor: auto;
+  }
+}
+
+%btn-base {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  &:disabled,
+  &[disabled] {
+    cursor: auto;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background: none;
+  padding: $spacing-regular;
+
+  transition: border $anim-transition-hover, box-shadow $anim-transition-hover, color $anim-transition-hover,
+    background $anim-transition-hover;
+
+  &.-primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:not(:disabled) {
+      &:focus {
+        background-color: white;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+    }
+
+    &:disabled,
+    &[disabled] {
+      color: rgba(white, $opacity-disabled);
+      background-color: rgba($primary-color, $opacity-disabled);
+    }
+  }
+}

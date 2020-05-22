@@ -1,0 +1,13 @@
+
+Authent:
+  ☐ Gérer la récupération du user suite à la connection
+  ☐ Rajouter des guards sur les routes en fonction de connecté/pas connecté
+
+Design:
+  ☐ Refaire les notifs
+  ☐ Faire le layout global
+
+Archi:
+  ☐ Simplifier le css
+  ☐ Gestion en JS des breakpoints
+  ☐ Simplifier les breakpoints
