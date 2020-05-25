@@ -14,6 +14,7 @@ import openIdConfig from '@/../config/openId.config'
 // Plugins
 import firebasePlugin from '@/plugins/firebase'
 import notificationsPlugin from '@/plugins/notifications'
+import responsivePlugin from '@/plugins/responsive'
 
 Vue.config.productionTip = false
 
@@ -23,6 +24,7 @@ const client = axios.create({
 
 Vue.use(firebasePlugin, { store, firebaseConfig, openIdConfig, client })
 Vue.use(notificationsPlugin, { store })
+Vue.use(responsivePlugin)
 
 new Vue({
   router,

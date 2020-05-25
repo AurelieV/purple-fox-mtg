@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     close(notificationId) {
-      this.$notify.dimiss(notificationId)
+      this.$notifier.dimiss(notificationId)
     },
   },
 }
@@ -38,7 +38,7 @@ export default {
     box-shadow: 5px 5px 20px #cbcdd3;
     display: flex;
     align-items: center;
-    @include responsive('m') {
+    @include responsive('desktop') {
       width: 300px;
     }
     padding: $spacing-regular;

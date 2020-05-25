@@ -1,13 +1,19 @@
 
+☐ Add Readme
+
 Authent:
-  ☐ Gérer la récupération du user suite à la connection
-  ☐ Rajouter des guards sur les routes en fonction de connecté/pas connecté
+  ✔ Gérer la récupération du user suite à la connection @done(20-05-25 18:21)
+  ✔ Rajouter des guards sur les routes en fonction de connecté/pas connecté @done(20-05-25 19:12)
 
 Design:
   ☐ Refaire les notifs
   ☐ Faire le layout global
+  ☐ Apprendre Figma
+  ☐ Design system
+  ☐ Simplifier le css
 
 Archi:
-  ☐ Simplifier le css
-  ☐ Gestion en JS des breakpoints
-  ☐ Simplifier les breakpoints
+  ✔ Plugins pour gérer les breakpoints @done(20-05-25 18:21)
+  ✔ Mettre en place le debugger et les tasks avec browser intégré @done(20-05-25 15:00)
+  ☐ Dédupliquer le tri des breakpoints
+  ✔ Lazy loading components @done(20-05-25 19:39)

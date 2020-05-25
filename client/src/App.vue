@@ -1,25 +1,35 @@
 <template>
   <div id="app">
+    <Header />
+    Breakpoint: {{ currentBreakpoint }}
     <Notifications />
-    <button class="btn -primary" @click="logout" v-if="isConnected">Logout</button>
-    <router-link v-else :to="{ name: 'login' }" class="btn -primary">Login</router-link>
     <router-view />
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+
 export default {
-  computed: {
-    isConnected() {
-      return !!this.$store.state.auth.user
-    },
+  components: {
+    Header,
   },
-  methods: {
-    logout() {
-      this.$auth.logout()
+  computed: {
+    currentBreakpoint() {
+      return this.$responsive.currentBreakpoint
     },
   },
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+#app {
+  padding-top: $header-height;
+}
+.pfm-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+</style>

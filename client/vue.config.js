@@ -1,4 +1,5 @@
 const path = require('path')
+const jsonImporter = require('node-sass-json-importer')
 
 module.exports = {
   devServer: {
@@ -9,6 +10,16 @@ module.exports = {
         secure: false,
         pathRewrite: {
           '^/api': '',
+        },
+      },
+    },
+  },
+
+  css: {
+    loaderOptions: {
+      sass: {
+        sassOptions: {
+          importer: jsonImporter(),
         },
       },
     },

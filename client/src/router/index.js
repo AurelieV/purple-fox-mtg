@@ -1,16 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
 
-import AuthRedirect from '@/views/AuthRedirect'
-import Login from '@/views/Login'
+import store from '@/store'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/login', name: 'login', component: Login },
-  { path: '/authent-redirect', name: 'authent-redirect', component: AuthRedirect },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "login" */ '@/views/Login.vue'),
+  },
+  {
+    path: '/authent-redirect',
+    name: 'authent-redirect',
+    component: () => import(/* webpackChunkName: "auth-redirect" */ '@/views/AuthRedirect.vue'),
+  },
+  {
+    path: '/',
+    component: () => import(/* webpackChunkName: "main" */ '@/views/Main.vue'),
+    beforeEnter: async (to, from, next) => {
+      await Vue.prototype.$auth.isInit
+      const isConnected = !!store.state.auth.uid
+      next(isConnected || { name: 'login' })
+    },
+    children: [
+      { path: '/', name: 'home', component: () => import(/* webpackChunkName: "main" */ '@/views/Main/Home.vue') },
+    ],
+  },
 ]
 
 const router = new VueRouter({

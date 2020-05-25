@@ -1,11 +1,9 @@
-//-- Breakpoints
-$xs-breakpoint: rem(0px);
-$s-breakpoint: rem(375px);
-$m-breakpoint: rem(770px);
-$l-breakpoint: rem(1030px);
+@import '../shared-variables.json';
 
 $primary-color: rebeccapurple;
 $secondary-color: orange;
+
+$header-height: rem(64px);
 
 // Space
 $spacing-base: rem(16px);

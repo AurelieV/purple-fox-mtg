@@ -1,16 +1,20 @@
-export const UPDATE_USER_ACTION = 'updateUser'
+import { firestoreAction } from 'vuexfire'
 
-const UPDATE_USER_MUTATION = 'update user'
+export const UPDATE_USER_ACTION = 'Update user action'
+export const RESET_USER_ACTION = 'Reset user action'
+
+const UPDATE_UID_MUTATION = 'update user uid'
 const RESET_USER_MUTATION = 'reset user'
 
-export default function store() {
+export default function store({ db }) {
   return {
     state: {
+      uid: undefined,
       user: undefined,
     },
     mutations: {
-      [UPDATE_USER_MUTATION](state, user) {
-        state.user = user
+      [UPDATE_UID_MUTATION](state, uid) {
+        state.uid = uid
       },
       [RESET_USER_MUTATION](state) {
         state.uid = null
@@ -18,13 +22,14 @@ export default function store() {
       },
     },
     actions: {
-      async [UPDATE_USER_ACTION]({ commit }, user) {
-        if (user) {
-          commit(UPDATE_USER_MUTATION, user)
-        } else {
-          commit(RESET_USER_MUTATION)
-        }
-      },
+      [UPDATE_USER_ACTION]: firestoreAction(({ commit, bindFirestoreRef }, user) => {
+        commit(UPDATE_UID_MUTATION, user.uid)
+        return bindFirestoreRef('user', db.collection('users').doc(user.uid))
+      }),
+      [RESET_USER_ACTION]: firestoreAction(async ({ commit, unbindFirestoreRef }) => {
+        await unbindFirestoreRef('user')
+        commit(RESET_USER_MUTATION)
+      }),
     },
   }
 }

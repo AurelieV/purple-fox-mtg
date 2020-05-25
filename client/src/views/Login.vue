@@ -49,7 +49,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 0;
-  @include responsive('m') {
+  @include responsive('desktop') {
     min-height: 100vh;
   }
 
@@ -57,7 +57,7 @@ export default {
     width: 100%;
     height: 100vh;
     background: white;
-    @include responsive('m') {
+    @include responsive('desktop') {
       height: auto;
       width: 400px;
       background: white;
@@ -77,7 +77,7 @@ export default {
       height: 100px;
       border-radius: 50%;
     }
-    @include responsive('m') {
+    @include responsive('desktop') {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
     }
