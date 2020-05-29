@@ -1,7 +1,18 @@
 @import '../shared-variables.json';
 
-$primary-color: rebeccapurple;
-$secondary-color: orange;
+$purple-200: #e6dbf1;
+$purple-300: #cdb7e3;
+$purple-400: #a781cd;
+$purple-500: #814bb8;
+$purple-600: #5a3581;
+$purple-700: #341e4a;
+$purple-800: #0d0712;
+
+$neutral-300: #d0d0d0;
+$neutral-400: #a0a0a0;
+
+$primary-color: $purple-500;
+$secondary-color: #ffa317;
 
 $header-height: rem(64px);
 
@@ -19,3 +30,6 @@ $spacing-xxxlarge: $spacing-base * 6; // 96px
 
 $title-font-size: rem(24px);
 $opacity-disabled: 0.4;
+
+$default-font-family: 'Raleway', sans-serif;
+$title-font-family: 'Zilla Slab', serif;

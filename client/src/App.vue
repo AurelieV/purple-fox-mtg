@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header />
-    Breakpoint: {{ currentBreakpoint }}
     <Notifications />
+    <button :style="{ margin: '4rem' }" class="pfm-btn -primary">Primary action</button>
     <router-view />
   </div>
 </template>

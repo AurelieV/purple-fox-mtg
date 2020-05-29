@@ -1,19 +1,18 @@
 
 ☐ Add Readme
 
-Authent:
-  ✔ Gérer la récupération du user suite à la connection @done(20-05-25 18:21)
-  ✔ Rajouter des guards sur les routes en fonction de connecté/pas connecté @done(20-05-25 19:12)
-
 Design:
+  ☐ Apprendre Figma @started(20-05-29 18:40)
+  ☐ Design system @started(20-05-29 18:40)
+  ☐ Simplifier le css
+  ☐ Gérer l'outline au focus clavier
+  ☐ Implémenter tous les styles de buttons + mutaliser le code dans des mixins
+  ☐ Implémenter les typos (mixin + global class)
   ☐ Refaire les notifs
   ☐ Faire le layout global
-  ☐ Apprendre Figma
-  ☐ Design system
-  ☐ Simplifier le css
 
 Archi:
-  ✔ Plugins pour gérer les breakpoints @done(20-05-25 18:21)
-  ✔ Mettre en place le debugger et les tasks avec browser intégré @done(20-05-25 15:00)
   ☐ Dédupliquer le tri des breakpoints
-  ✔ Lazy loading components @done(20-05-25 19:39)
+  ☐ Ajout Storybook (avec implémentation du design)
+  ☐ Premier test unitaire
+  ☐ Premier test e2e

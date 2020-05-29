@@ -1,7 +1,7 @@
 <template>
   <header class="pfm-header">
     <div class="pfm-header__main">
-      <span v-if="name">{{ name }}</span>
+      <span v-if="name">Bonjour: {{ name }}</span>
     </div>
     <div class="pfm-header__actions">
       <button class="btn -primary" @click="logout" v-if="isConnected">Logout</button>
